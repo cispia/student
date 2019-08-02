@@ -83,6 +83,7 @@ export default {
         margin-left: 308px;
         /* float: right; */
         /* margin-right: 100px; */
+        text-align: center;
     }
 
     .cHead{

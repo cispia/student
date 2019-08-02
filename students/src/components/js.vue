@@ -8,7 +8,6 @@
             <table>
                 <tr>
                     <th>班级</th>
-                    <th>人数</th>
                     <th>电风扇</th>
                     <th>桌子</th>
                     <th>椅子</th>
@@ -21,9 +20,6 @@
                         1809
                     </td>
                     <td>
-                        29
-                    </td>
-                    <td>
                         2
                     </td>
                     <td>
@@ -36,7 +32,7 @@
                         1
                     </td>
                     <td>
-                        <button id="delete">修改</button>
+                        <button id="delete" data-toggle="modal" data-target="#login_in">修改</button>
                     </td>
                     <td>
                         <button id="delete">删除</button>
@@ -47,9 +43,6 @@
                         1809
                     </td>
                     <td>
-                        29
-                    </td>
-                    <td>
                         2
                     </td>
                     <td>
@@ -62,7 +55,7 @@
                         1
                     </td>
                     <td>
-                        <button id="delete">修改</button>
+                        <button id="delete" data-toggle="modal" data-target="#login_in">修改</button>
                     </td>
                      <td>
                         <button id="delete">删除</button>
@@ -70,6 +63,42 @@
                 </tr>
             </table>
         </div>
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="login_in">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content" style="width:400px;">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel"  data-toggle="modal" data-target="#login_in">修改</h4>
+					</div>
+					<div class="modal-body" style="height:500px;width:400px;">
+						<div class="form-group">
+							<label for="user">班级</label>
+							<input type="text" class="form-control" id="user_in" style="top:40px;width:98%;margin-left:1%;"  placeholder="班级">
+						</div>
+                        <div class="form-group">
+							<label for="user">电风扇</label>
+							<input type="text" class="form-control" id="user_in" style="top:40px;width:98%;margin-left:1%;"  placeholder="电风扇">
+						</div>
+                        <div class="form-group">
+							<label for="user">桌子</label>
+							<input type="text" class="form-control" id="user_in" style="top:40px;width:98%;margin-left:1%;"  placeholder="桌子">
+						</div>
+                        <div class="form-group">
+							<label for="user">椅子</label>
+							<input type="text" class="form-control" id="user_in" style="top:40px;width:98%;margin-left:1%;"  placeholder="椅子">
+						</div>
+                        <div class="form-group">
+							<label for="user">空调</label>
+							<input type="text" class="form-control" id="user_in" style="top:40px;width:98%;margin-left:1%;"  placeholder="空调">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" id="btn_in">保存</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
     </div>
 </template>
 <script>

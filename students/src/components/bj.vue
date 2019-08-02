@@ -52,21 +52,21 @@
             </table>
         </div>
         <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="login_in">
-			<div class="modal-dialog modal-sm" role="document" id="xiug">
+			<div class="modal-dialog modal-sm" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						<h4 class="modal-title" id="myModalLabel"  data-toggle="modal" data-target="#login_in">修改</h4>
 					</div>
-					<div class="modal-body">
+					<div class="modal-body" style="height:100px;">
 						<div class="form-group">
 							<label for="user">班级</label>
-							<input type="text" class="form-control" id="user_in" placeholder="班级">
+							<input type="text" class="form-control" id="user_in" style="top:40px;width:98%;margin-left:1%;"  placeholder="班级">
 						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-primary" id="btn_in">保存</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 					</div>
 				</div>
 			</div>
@@ -74,8 +74,6 @@
     </div>
 </template>
 <script>
-import 'bootstrap/dist/css/bootstrap.min.css'
-// import 'bootstrap/dist/js/bootstrap.min.js'
 
 export default {
     methods: {
@@ -89,7 +87,6 @@ export default {
         addpeople.style.display = 'none';
     } 
     }
-//    
 }
 </script>
 <style scoped>
@@ -161,9 +158,5 @@ export default {
         position: absolute;
         left: 0;
         top: 0;
-    }
-    #xiug{
-        width:500px;
-        height:200px;
     }
 </style>
