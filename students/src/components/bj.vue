@@ -117,7 +117,7 @@ export default {
     table th,table tr td{
         border:1px solid #a8aeb2;
         /* line-height: 50px; */
-        padding: 5px 30px;
+        padding: 5px 60px;
         position:relative;
         height:36px;
     }
