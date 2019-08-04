@@ -3,39 +3,7 @@
         <div class="zheader">
             <h1>宿舍</h1>
         </div>
-        <div class="zContent">
-            <input type="button" value="添加" class="jiaBtn"/>
-            <div class="xia">
-                <div class="zItem">
-                    寝室：
-                    <input type="text"/>
-                </div>
-                <div class="zItem">
-                    姓名：
-                    <input type="text"/>
-                </div>
-                <div class="zItem">
-                    班级：
-                    <input type="text"/>
-                </div>
-                <div class="zItem">
-                    班主任：
-                    <input type="text"/>
-                </div>
-                <div class="zItem">
-                    床号：
-                    <input type="text"/>
-                </div>
-                <div class="zItem">
-                    值日号：
-                    <input type="text"/>
-                </div>
-                <div class="zItem">
-                    手机号：
-                    <input type="text"/>
-                </div>
-            </div>
-            <div class="zList">
+        <div class="zList">
                 <table cellspacing="0" cellpadding="0">
                     <thead>
                         <tr>
@@ -53,17 +21,17 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><input type="text" value="1504990"/></td>
-                            <td><input type="text" value="Rain"/></td>
-                            <td><input type="text" value="1809"/></td>
-                            <td><input type="text" value="曲晓芳"/></td>
-                            <td><input type="text" value="男"/></td>
-                            <td><input type="text" value="201"/></td>
-                            <td><input type="text" value="1"/></td>
-                            <td><input type="text" value="1"/></td>
-                            <td><input type="text" value="1489965485648986"/></td>
+                            <td>1504990</td>
+                            <td>Rain</td>
+                            <td>1809</td>
+                            <td>曲晓芳</td>
+                            <td>男</td>
+                            <td>200</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>7916516588521561</td>
                             <td>
-                                <input type="button" value="修改"  class="gai"/>
+                                <input type="button" value="修改"  class="gai" data-toggle="modal" data-target=".sushe"/>
                                 <input type="button" value="删除"  class="del"/>
                             </td>
                         </tr>
@@ -77,6 +45,57 @@
                     <button>上一页</button>
                     <input type="text" value="1" class="ipt"/>
                     <button>下一页</button>
+                </div>
+            </div>
+            <div class="modal sushe" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">宿舍</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                        <label for="exampleInputEmail1">学号</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入学号">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">姓名</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">班级</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入班级">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">班主任</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入班主任">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">性别</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入性别">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">寝室</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入寝室">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">床号</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入床号">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">值日号</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入值日号">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">手机号</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入手机号">
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">修改</button>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -137,12 +156,16 @@ export default {
         margin-left: 20px;
         margin-top: 20px;
     }
+    .zjieshao{
+        margin-left: 20px;
+        margin-top: 20px;
+    }
     table{
         width: 900px;
     }
     table tr th,table tr td{
         border: 1px solid;
-        text-align: left;
+        text-align: center;
         padding-left: 4px;
         min-width:100px;
         min-height:20px;
