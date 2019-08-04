@@ -6,32 +6,34 @@
             <div class="chuangjian">
                 <h3>课程信息添加</h3>
                 <div class="item">
-                    班级：
-                    <input type="text"/>
+                    <input type="button" value="添加" id="jia"/>
+                    <input type="button" value="取消" id="reset"/>
                 </div>
-                <div class="item">
-                    讲师：
-                    <input type="text"/>
-                </div>
-                <div class="item">
-                    班主任：
-                    <input type="text"/>
-                </div>
-                <div class="item">
-                    课程：
-                    <input type="text"/>
-                </div>
-                <div class="item">
-                    开始时间：
-                    <input type="text"/>
-                </div>
-                <div class="item">
-                    结束时间：
-                    <input type="text"/>
-                </div>
-                <div class="item">
-                    <input type="button" value="添加" class="jia"/>
-                    <input type="button" value="重置" class="reset"/>
+                <div class="tj">
+                    <table cellspacing="0" cellpadding="0">
+                        <thead>
+                            <tr>
+                                <th>班级</th>
+                                <th>讲师</th>
+                                <th>班主任</th>
+                                <th>课程</th>
+                                <th>开始时间</th>
+                                <th>结束时间</th>
+                                <th>是否添加</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="text"/></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="button" value="添加" class="gai"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         <div class="list">
@@ -50,13 +52,13 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><input type="text" value="1809"></td>
-                        <td><input type="text" value="李广才"></td>
-                        <td><input type="text" value="曲晓芳"></td>
-                        <td><input type="text" value="实训一"></td>
-                        <td><input type="text" value="2019.7.27"></td>
-                        <td><input type="text" value="2019.8.27"></td>
-                        <td><input type="button" value="修改" class="gai"/></td>
+                        <td>1809</td>
+                        <td>李广才</td>
+                        <td>曲晓芳</td>
+                        <td>实训一</td>
+                        <td>2019.7.27</td>
+                        <td>2019.8.27</td>
+                        <td><input type="button" value="修改" class="gai btn-primary" data-toggle="modal" data-target=".paike"/></td>
                     </tr>
                 </tbody>
             </table>
@@ -70,17 +72,65 @@
                 </div>
             </div>
         </div>
+        <div class="modal paike" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">排课管理</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                        <label for="exampleInputEmail1">班级</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入班级">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">讲师</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入讲师">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">班主任</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入班主任">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">课程</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入课程">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">开始时间</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入开始时间">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">结束时间</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入结束时间">
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">修改</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
     </div>
+
 </template>
 
 <script>
-
-
 export default {
+    mounted(){
+        var tj = document.getElementsByClassName('tj')[0]
+        jia.onclick = function(){
+            tj.style.display = "block"
+        }
+        reset.onclick = function(){
+            tj.style.display = "none"
+        }
+    }
 }
 </script>
 
 <style scoped>
+
     input{
         border:none;
         outline:none;
@@ -101,8 +151,8 @@ export default {
         line-height: 60px;
     }
     .chuangjian{
-        height: 100px;
         padding-left: 20px;
+        height: 150px;
     }
     .chuangjian h3{
         font-weight: 500;
@@ -110,6 +160,10 @@ export default {
         margin-bottom: 10px;
         color: #434340;
         text-align: left;
+    }
+    .tj{
+        margin-top: 20px;
+        display: none;
     }
     .item{
         float: left;
@@ -123,12 +177,12 @@ export default {
         width: 100px;
         height: 25px;
     }
-    .jia{
+    #jia{
         width: 100px;
         height: 25px;
         cursor: pointer;
     }
-    .reset{
+    #reset{
         width: 100px;
         height: 25px;
         cursor: pointer;
@@ -136,6 +190,7 @@ export default {
     }
     .list{
         padding-left: 20px;
+        margin-top: 20px;
     }
     .list h3{
         margin-bottom: 5px;
@@ -150,14 +205,9 @@ export default {
         min-width:120px;
         height:30px;
     }
-    table tr td input{
-        width: 120px;
-        min-height: 30px;
-        text-align: center;
-    }
     .gai{
         width: 60px;
-        height: 20px;
+        height: 24px;
         cursor: pointer;
     }
     .footer{

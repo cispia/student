@@ -26,7 +26,7 @@
                 <router-link to='./PaiKe'>排课管理</router-link>
             </li>
             <li @click="active=7" :class="{'liActive':active==7}">
-                <router-link to='./xtgg'>分班</router-link>
+                <router-link to='./fb'>分班</router-link>
             </li>
             <li @click="active=8" :class="{'liActive':active==8}">
                 <router-link to='./sushe'>宿舍</router-link>

@@ -3,16 +3,18 @@
     <div class="zheader">
       <h1>综合积分</h1>
     </div>
-
+    <div class="zjieshao">
+            <p>扣分制度：迟到 5分、旷课 10分、工装未穿 5分、上课玩游戏 10分、</p>
+        </div>
     <div class="zcontent">
       <table cellspacing="0" cellpadding="0">
         <thead>
           <tr>
             <th>学号</th>
 
-            <th>讲师</th>
-
             <th>扣除人</th>
+
+            <th>讲师</th>
 
             <th>时间</th>
 
@@ -24,17 +26,17 @@
 
         <tbody>
           <tr>
-            <td><input type="text" value="1504990"/></td>
+            <td>1504990</td>
 
-            <td><input type="text" value="李广才"/></td>
+            <td>xxx</td>
 
-            <td><input type="text" value="李广才"/></td>
+            <td>李广才</td>
 
-            <td><input type="text" value="2019.7.27"/></td>
+            <td>2019.7.27</td>
 
-            <td><input type="text" value="迟到"/></td>
+            <td>迟到</td>
 
-            <td><input type="text" value="5"/></td>
+            <td>5</td>
           </tr>
         </tbody>
       </table>
@@ -77,7 +79,10 @@ input{
 .zheader h3 {
   line-height: 60px;
 }
-
+.zjieshao{
+        margin-left: 20px;
+        margin-top: 20px;
+    }
 .zcontent {
   margin-left: 20px;
   padding-top: 20px;
@@ -90,7 +95,7 @@ table {
 table tr th,
 table tr td {
   border: 1px solid;
-  text-align: left;
+  text-align: center;
   border-spacing: 0px;
   padding-left: 4px;
   min-width:120px;

@@ -11,7 +11,7 @@ import PaiKe from './components/PaiKe.vue' //排课管理
 import sushe from './components/sushe.vue' //宿舍
 import jf from './components/jf.vue' //信誉积分
 import xtgg from './components/xtgg.vue' //系统公告
-
+import fb from './components/fb.vue' //系统公告
 
 
 
@@ -74,6 +74,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: login
+    },
+    {
+      path: '/fb',
+      name: 'fb',
+      component: fb
     },
 
   ]
