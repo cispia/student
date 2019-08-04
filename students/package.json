@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+<<<<<<< HEAD
     "bootstrap": "^4.3.1",
+=======
+    "bootstrap": "^3.4.1",
+>>>>>>> 8beee57fdaf2c27d8195a06d90adef8c819c76db
     "core-js": "^2.6.5",
     "element-ui": "^2.11.1",
     "mysql": "^2.17.1",
@@ -24,6 +28,7 @@
     "@vue/cli-plugin-eslint": "^3.9.0",
     "@vue/cli-service": "^3.9.0",
     "babel-eslint": "^10.0.1",
+    "element-ui": "^2.11.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.6.10"
