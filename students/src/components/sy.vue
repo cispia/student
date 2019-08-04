@@ -103,7 +103,7 @@ export default {
     } 
     table th,table tr td{
         border:1px solid #a8aeb2;
-        padding: 5px 10px;
+        padding: 5px 20px;
     }
     #add,#cancel{
         width: 80px;
